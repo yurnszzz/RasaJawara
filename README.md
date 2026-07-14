@@ -12,7 +12,7 @@
 
 <br/>
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=22&duration=3000&pause=1000&color=C8A165&center=true&vCenter=true&multiline=true&repeat=true&width=550&height=80&lines=Cita+Rasa+Jawara%2C+Warisan+Nusantara+🏅;Oleh-oleh+Premium+Khas+Banten+🎁;Pesan+Online+dengan+QRIS+💳" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=22&duration=3000&pause=1000&color=C8A165&center=true&vCenter=true&repeat=true&width=550&height=35&lines=Cita+Rasa+Jawara%2C+Warisan+Nusantara;Oleh-oleh+Premium+Khas+Banten;Pesan+Online+dengan+QRIS" alt="Typing SVG" />
 
 </div>
 
@@ -210,13 +210,9 @@ const CONFIG = {
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=120&section=footer&animation=twinkling" width="100%"/>
-
 <br/>
 
-**Made with ❤️ by Rasa Jawara Souvenir**
-
-<br/>
+**Rasa Jawara Souvenir** · Pusat Oleh-oleh Khas Banten
 
 [![GitHub](https://img.shields.io/badge/GitHub-RasaJawara-181717?style=flat-square&logo=github)](https://github.com/yurnszzz/RasaJawara)
 
