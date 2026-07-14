@@ -1,0 +1,21 @@
+# Sensitive config
+config.js
+
+# Assets with private data
+assets/images/qris.png
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Legacy root-level assets (reorganized into assets/images/)
+empingRJS.jpg
+logoRJS.png
+Kode QRIS Rasa Jawara.png
+
+# Base64 text files
+*.base64.txt

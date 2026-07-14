@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Rasa Jawara Souvenir - Oleh-oleh Khas Banten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link rel="icon" href="assets/images/logo.png"/>
+<link rel="stylesheet" href="css/style.css"/>
+<script>
+tailwind.config={theme:{extend:{colors:{"jawara-gold":"#C8A165","jawara-brown":"#4A3321","jawara-cream":"#F9F5F0"},fontFamily:{serif:["Playfair Display","serif"],sans:["Poppins","sans-serif"]}}}}
+</script>
+</head>
+<body class="bg-jawara-cream font-sans text-gray-800 leading-relaxed overflow-x-hidden">
+
+<!-- Navbar -->
+<nav class="bg-white/95 backdrop-blur-sm shadow-md fixed w-full z-50 transition-all duration-300">
+<div class="container mx-auto px-4 py-3 flex justify-between items-center relative transition-all duration-300">
+<div class="flex-1 flex justify-start">
+<a href="#home" class="flex items-center gap-3 group">
+<img src="assets/images/logo.png" alt="Logo" class="h-10 md:h-12 w-auto object-contain transition-all duration-300"/>
+<span class="text-xl md:text-2xl font-serif font-bold text-jawara-brown tracking-wide group-hover:text-jawara-gold transition duration-300">RASA JAWARA</span>
+</a>
+</div>
+<div class="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2 font-medium text-jawara-brown">
+<a href="#home" class="nav-link">Beranda</a>
+<a href="#about" class="nav-link">Tentang Kami</a>
+<a href="#products" class="nav-link">Produk</a>
+<a href="#location" class="nav-link">Lokasi</a>
+</div>
+<div class="flex-1 flex justify-end items-center gap-6">
+<div class="relative cursor-pointer group" onclick="toggleCart()">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-jawara-brown group-hover:text-jawara-gold transition"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+<span id="cart-count" class="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-1.5 py-0.5 rounded-full hidden">0</span>
+</div>
+<button class="md:hidden text-2xl text-jawara-brown" onclick="toggleMobileMenu()"><i id="mobile-menu-icon" class="fa-solid fa-bars"></i></button>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-white w-full border-t shadow-lg absolute top-full left-0">
+<div class="flex flex-col p-4 space-y-4 font-medium text-jawara-brown">
+<a href="#home" onclick="toggleMobileMenu()">Beranda</a>
+<a href="#about" onclick="toggleMobileMenu()">Tentang Kami</a>
+<a href="#products" onclick="toggleMobileMenu()">Produk</a>
+<a href="#location" onclick="toggleMobileMenu()">Lokasi</a>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-16 relative overflow-hidden">
+<div class="text-white max-w-4xl z-10">
+<h2 class="text-jawara-gold text-sm md:text-lg font-semibold tracking-[0.2em] uppercase mb-6 reveal">Authentic Taste of Banten</h2>
+<h1 class="text-5xl md:text-7xl font-serif font-bold mb-8 leading-tight drop-shadow-lg reveal">Cita Rasa Jawara,<br/><span id="typed-tagline"></span><span class="typed-cursor">|</span></h1>
+<p class="text-lg md:text-xl mb-10 font-light opacity-90 max-w-2xl mx-auto reveal">Menyajikan keaslian oleh-oleh khas Banten dengan sentuhan kualitas premium.</p>
+<a href="#products" class="bg-jawara-gold text-jawara-brown px-10 py-4 rounded-full font-bold hover:bg-white transition duration-300 transform hover:scale-105 shadow-lg inline-block tracking-wide reveal ripple-btn">PESAN SEKARANG</a>
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="py-24 bg-white relative overflow-hidden">
+<div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-1/2 relative reveal-left">
+<img src="assets/images/hero.jpg" alt="Tentang Kami" class="rounded-2xl shadow-2xl z-10 relative object-cover h-96 w-full"/>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-jawara-gold/20 rounded-lg -z-0"></div>
+</div>
+<div class="md:w-1/2 reveal-right">
+<h3 class="text-jawara-gold font-bold uppercase tracking-wider mb-4">Tentang Kami</h3>
+<h2 class="text-4xl md:text-5xl font-serif text-jawara-brown font-bold mb-8 leading-tight">Pusat Oleh-oleh<br/>Khas Banten</h2>
+<p class="text-gray-600 mb-8 leading-relaxed text-lg">Rasa Jawara Souvenirs adalah pusat oleh-oleh khas Banten. Kami menyediakan berbagai pilihan produk asli Banten, mulai dari makanan ringan yang lezat hingga kerajinan tangan yang berciri khas Banten.</p>
+<div class="flex gap-8 pt-4 border-t border-gray-100">
+<div><h4 class="text-4xl font-bold text-jawara-gold font-serif">Asli</h4><p class="text-sm text-gray-500 font-medium uppercase tracking-wider mt-1">Khas Banten</p></div>
+<div><h4 class="text-4xl font-bold text-jawara-gold font-serif">Premium</h4><p class="text-sm text-gray-500 font-medium uppercase tracking-wider mt-1">Ingredients</p></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Products -->
+<section id="products" class="py-24 bg-jawara-cream/50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-10 max-w-2xl mx-auto reveal">
+<h2 class="text-4xl md:text-5xl font-serif text-jawara-brown font-bold mb-4">Koleksi Jawara</h2>
+<p class="text-gray-600 text-lg">Makanan Otentik Banten, Pizza, dan Souvenir Unik.</p>
+</div>
+<div class="max-w-4xl mx-auto mb-12 space-y-6 reveal">
+<div class="relative max-w-md mx-auto">
+<input type="text" id="search-input" placeholder="Cari produk favoritmu..." class="w-full px-6 py-3 rounded-full border-2 border-gray-200 focus:border-jawara-gold focus:ring-0 outline-none transition pl-12 text-gray-700 shadow-sm" oninput="handleSearch(this.value)"/>
+<i class="fa-solid fa-search absolute left-5 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+</div>
+<div class="flex flex-wrap justify-center gap-3">
+<button onclick="setCategory('Semua')" id="btn-Semua" class="cat-btn cat-btn-active px-6 py-2 rounded-full border border-gray-300 bg-white text-jawara-brown font-semibold hover:bg-gray-50 transition shadow-sm active:scale-95">Semua</button>
+<button onclick="setCategory('Oleh-oleh')" id="btn-Oleh-oleh" class="cat-btn px-6 py-2 rounded-full border border-gray-300 bg-white text-jawara-brown font-semibold hover:bg-gray-50 transition shadow-sm active:scale-95">Oleh-oleh</button>
+<button onclick="setCategory('Pizza')" id="btn-Pizza" class="cat-btn px-6 py-2 rounded-full border border-gray-300 bg-white text-jawara-brown font-semibold hover:bg-gray-50 transition shadow-sm active:scale-95">Pizza</button>
+<button onclick="setCategory('Souvenir')" id="btn-Souvenir" class="cat-btn px-6 py-2 rounded-full border border-gray-300 bg-white text-jawara-brown font-semibold hover:bg-gray-50 transition shadow-sm active:scale-95">Souvenir</button>
+</div>
+</div>
+<div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 min-h-[300px] product-grid-enter"></div>
+</div>
+</section>
+
+<!-- Location -->
+<section id="location" class="py-24 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-12 max-w-2xl mx-auto reveal">
+<h2 class="text-4xl md:text-5xl font-serif text-jawara-brown font-bold mb-4">Lokasi Toko</h2>
+<p class="text-gray-600 text-lg">Kunjungi kami langsung untuk menikmati kelezatan oleh-oleh khas Banten.</p>
+</div>
+<div class="max-w-5xl mx-auto reveal">
+<div class="map-container relative">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8!2d106.7190464!3d-6.2586843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fb3f32b39fbb%3A0x4632cae3059752df!2sRasa%20Jawara!5e0!3m2!1sid!2sid!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="map-overlay-card">
+<h3 class="font-serif font-bold text-xl text-jawara-brown mb-2">Rasa Jawara</h3>
+<p class="text-sm text-gray-600 mb-4 leading-relaxed">Jl. Cendana 8 South No.21 Blok C5, West Jurang Manggu, Pondok Aren, South Tangerang City, Banten 15223</p>
+<a href="https://share.google/uc9XDCBdOXbDtyvgG" target="_blank" class="bg-jawara-gold text-jawara-brown text-center py-2.5 rounded-lg font-bold text-sm hover:bg-jawara-brown hover:text-white transition flex items-center justify-center gap-2">
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+Petunjuk Arah</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer id="contact" class="bg-jawara-brown text-white pt-16 pb-8">
+<div class="container mx-auto px-6 grid md:grid-cols-3 gap-8 mb-12">
+<div>
+<div class="flex items-center gap-3 mb-6"><img src="assets/images/logo.png" class="h-10 brightness-0 invert opacity-90"/><span class="text-xl font-serif font-bold text-white tracking-wide">RASA JAWARA</span></div>
+<p class="opacity-80 mb-6 pr-6 leading-relaxed">Pusat oleh-oleh khas Banten, menyajikan cita rasa otentik dan kenangan terbaik dari Tanah Jawara.</p>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-jawara-gold font-serif tracking-wider">Kontak</h4>
+<ul class="space-y-4 opacity-80">
+<li class="flex items-center gap-3"><i class="fa-solid fa-phone text-jawara-gold"></i><span>0857-7944-6490</span></li>
+<li class="flex items-start gap-3"><i class="fa-solid fa-map-pin text-jawara-gold mt-1"></i><span>South Tangerang, Banten</span></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-bold mb-6 text-jawara-gold font-serif tracking-wider">Menu</h4>
+<ul class="space-y-3 opacity-80">
+<li><a href="#home" class="hover:text-jawara-gold transition">Beranda</a></li>
+<li><a href="#products" class="hover:text-jawara-gold transition">Produk</a></li>
+<li><a href="#location" class="hover:text-jawara-gold transition">Lokasi</a></li>
+</ul>
+</div>
+</div>
+<div class="text-center border-t border-white/10 pt-8 opacity-60 text-sm"><p>&copy; 2025 Rasa Jawara Souvenir. All Rights Reserved.</p></div>
+</footer>
+
+<!-- Product Detail Modal -->
+<div id="product-detail-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[70] hidden flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 pointer-events-none" onclick="if(event.target===this) closeProductDetail()">
+<div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full overflow-hidden flex flex-col md:flex-row relative transform transition-all duration-300 scale-95" id="detail-panel">
+<button onclick="closeProductDetail()" class="absolute top-4 right-4 bg-white/80 rounded-full p-2 hover:bg-red-50 text-gray-500 hover:text-red-500 transition z-10"><i class="fa-solid fa-times text-xl"></i></button>
+<div class="md:w-1/2 h-64 md:h-auto relative bg-gray-100">
+<img id="modal-img" src="" class="w-full h-full object-cover"/>
+<div id="modal-status-overlay" class="hidden absolute inset-0 bg-black/50 flex items-center justify-center"><span class="bg-red-600 text-white px-6 py-2 font-bold transform -rotate-12 border-4 border-white text-xl">SOLD OUT</span></div>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col h-full max-h-[80vh] overflow-y-auto">
+<span id="modal-category" class="text-jawara-gold font-bold tracking-widest uppercase text-xs mb-2"></span>
+<h2 id="modal-title" class="text-3xl font-serif font-bold text-jawara-brown mb-4 leading-tight"></h2>
+<p id="modal-desc-short" class="text-gray-700 font-medium mb-4 italic border-l-4 border-jawara-gold pl-4"></p>
+<div id="modal-desc-long" class="text-gray-600 text-sm leading-relaxed mb-6 flex-1"></div>
+<div class="mt-auto border-t border-gray-100 pt-6">
+<div class="flex items-center justify-between mb-4"><span class="text-gray-400 text-sm">Harga Satuan</span><span id="modal-price" class="text-2xl font-bold text-jawara-brown">Rp 0</span></div>
+<button id="modal-btn-add" class="w-full bg-jawara-brown text-white font-bold py-4 rounded-xl hover:bg-jawara-gold transition flex items-center justify-center gap-3 shadow-lg ripple-btn"><span>TAMBAH KE KERANJANG</span><i class="fa-solid fa-cart-plus text-xl"></i></button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Cart Drawer -->
+<div id="cart-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex justify-end transition-all duration-300 opacity-0 pointer-events-none" onclick="if(event.target===this) toggleCart()">
+<div class="bg-white w-full md:w-[450px] h-full shadow-2xl flex flex-col transform transition-transform duration-300 translate-x-full" id="cart-panel">
+<div class="p-6 bg-jawara-brown text-white flex justify-between items-center"><h3 class="font-serif font-bold text-xl">Keranjang Belanja</h3><button onclick="toggleCart()" class="text-2xl hover:text-jawara-gold transition"><i class="fa-solid fa-times"></i></button></div>
+<div id="cart-items" class="flex-1 overflow-y-auto p-6 space-y-6"></div>
+<div class="p-6 border-t bg-jawara-cream/30">
+<div class="flex justify-between font-bold text-xl mb-6 text-jawara-brown font-serif"><span>Total:</span><span id="cart-total">Rp 0</span></div>
+<button onclick="showCheckoutForm()" id="btn-checkout" class="w-full bg-jawara-gold text-jawara-brown font-bold py-4 rounded-full hover:bg-white hover:shadow-md transition disabled:opacity-50 disabled:cursor-not-allowed tracking-wider ripple-btn" disabled>LANJUT PEMBAYARAN</button>
+</div>
+</div>
+</div>
+
+<!-- Checkout Modal -->
+<div id="checkout-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[60] hidden flex items-center justify-center p-4 transition-all duration-300 opacity-0 pointer-events-none" onclick="if(event.target===this) closeCheckout()">
+<div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 relative transform transition-all duration-300 scale-95" id="checkout-panel">
+<button onclick="closeCheckout()" class="absolute top-5 right-5 text-gray-400 hover:text-red-500 transition text-xl"><i class="fa-solid fa-times"></i></button>
+<div class="text-center mb-6"><h3 class="text-2xl font-serif font-bold text-jawara-brown">Konfirmasi Pesanan</h3><p class="text-sm text-gray-500 mt-2">Lengkapi data untuk melihat kwitansi pembayaran.</p></div>
+<form id="order-form" onsubmit="generateReceipt(event)" class="space-y-4">
+<div><label class="block text-sm font-semibold text-gray-700 mb-2">Nama Lengkap</label><input type="text" id="cust-name" required placeholder="Masukkan nama lengkap" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-jawara-gold transition"/></div>
+<div><label class="block text-sm font-semibold text-gray-700 mb-2">No HP (WhatsApp)</label><input type="tel" id="cust-phone" required placeholder="08xxxxxxxxxx" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-jawara-gold transition"/></div>
+<div class="bg-yellow-50/80 p-4 rounded-xl text-sm border border-yellow-200/60"><div class="flex justify-between font-bold text-jawara-brown text-lg"><span>Total Bayar:</span><span id="checkout-total">Rp 0</span></div></div>
+<button type="submit" class="w-full bg-jawara-gold hover:bg-jawara-brown text-white font-bold py-4 rounded-full transition flex justify-center items-center gap-3 shadow-lg ripple-btn"><i class="fa-solid fa-file-lines text-xl"></i><span class="tracking-wider">LIHAT KWITANSI PEMBAYARAN</span></button>
+</form>
+</div>
+</div>
+
+<!-- Receipt Modal -->
+<div id="receipt-modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-[80] hidden flex items-center justify-center p-4">
+<div class="bg-white rounded-3xl w-full max-w-md p-6 max-h-[90vh] overflow-y-auto shadow-2xl relative">
+<div class="no-print flex justify-between items-center mb-4">
+<h3 class="text-xl font-bold text-jawara-brown flex items-center gap-2"><i class="fa-solid fa-file-lines"></i> Kwitansi Pembayaran</h3>
+<button onclick="closeReceiptModal()" class="text-gray-400 hover:text-red-500 text-xl"><i class="fa-solid fa-times"></i></button>
+</div>
+<div id="receipt-content" class="bg-white border-2 border-dashed border-jawara-gold rounded-xl p-5" style="font-family:'Courier New',monospace;max-width:320px;margin:0 auto;">
+<div class="text-center border-b-2 border-dashed border-gray-300 pb-4 mb-4">
+<img src="assets/images/logo.png" class="h-14 mx-auto mb-2"/><h2 class="font-black text-lg text-jawara-brown" style="font-family:'Playfair Display',serif;">RASA JAWARA SOUVENIR</h2>
+<p class="text-[10px] text-gray-500 leading-tight">Jl. Cendana 8 South No.21 Blok C5<br>West Jurang Manggu, Pondok Aren<br>South Tangerang City, Banten 15223</p>
+</div>
+<div class="bg-yellow-50 border border-yellow-300 rounded-lg p-2 mb-4 text-center flex items-center justify-center gap-1.5 text-yellow-700"><i class="fa-solid fa-triangle-exclamation text-xs"></i><span class="text-xs font-bold uppercase">Kwitansi Tagihan (Belum Dibayar)</span></div>
+<div class="text-[11px] space-y-1 mb-4">
+<div class="flex justify-between"><span class="text-gray-500">No. Order:</span><span class="font-bold" id="receipt-order-no">-</span></div>
+<div class="flex justify-between"><span class="text-gray-500">Tanggal:</span><span class="font-bold text-right" id="receipt-date">-</span></div>
+<div class="flex justify-between"><span class="text-gray-500">Nama:</span><span class="font-bold" id="receipt-customer">-</span></div>
+<div class="flex justify-between"><span class="text-gray-500">No HP:</span><span class="font-bold" id="receipt-phone">-</span></div>
+</div>
+<div class="border-t-2 border-b-2 border-dashed border-gray-300 py-3 mb-4">
+<p class="text-[10px] font-bold text-gray-500 mb-2 uppercase">Detail Pesanan:</p>
+<table class="w-full text-[11px]"><thead class="text-gray-500"><tr><th class="text-left pb-2 pr-2" style="width:42%">Item</th><th class="text-center pb-2 px-1" style="width:12%">Qty</th><th class="text-right pb-2 px-1" style="width:22%">Harga</th><th class="text-right pb-2 pl-1" style="width:24%">Total</th></tr></thead><tbody id="receipt-items" class="font-medium"></tbody></table>
+</div>
+<div class="text-right mb-4"><div class="text-lg font-black text-jawara-brown">TOTAL: <span id="receipt-total">Rp 0</span></div></div>
+<div class="border-t-2 border-dashed border-gray-300 pt-4">
+<p class="text-[10px] font-bold text-jawara-brown text-center mb-3 uppercase">Metode Pembayaran</p>
+<div class="text-center mb-3"><img src="assets/images/qris.png" class="w-28 h-28 mx-auto border rounded-lg"/><p class="text-[9px] font-bold text-gray-600 mt-1">Scan QRIS untuk bayar</p></div>
+<div class="text-center text-[10px] space-y-1"><p class="text-[9px] font-bold text-gray-500">Atau Transfer ke:</p><div class="flex flex-col gap-1 items-center" id="receipt-bank-accounts"></div></div>
+</div>
+<div class="text-center mt-4 pt-3 border-t border-gray-200"><p class="text-[10px] text-yellow-600 font-bold">Harap lakukan pembayaran sesuai tagihan</p><p class="text-[9px] text-gray-400 mt-1">Kwitansi ini bukan bukti pembayaran</p></div>
+</div>
+<div class="no-print flex flex-col sm:flex-row gap-3 mt-4">
+<button onclick="downloadReceipt()" class="flex-1 py-3 bg-jawara-gold text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-jawara-brown transition ripple-btn"><i class="fa-solid fa-download"></i> Download Kwitansi</button>
+<button onclick="confirmViaWhatsApp()" class="flex-1 py-3 bg-[#25D366] text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition ripple-btn"><i class="fa-brands fa-whatsapp text-xl"></i> Konfirmasi WA</button>
+</div>
+</div>
+</div>
+
+<script src="config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/receipt.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
