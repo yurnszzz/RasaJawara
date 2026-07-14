@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=250&section=header&text=🏆%20Rasa%20Jawara&fontSize=70&fontAlignY=35&desc=Website%20E-Commerce%20Oleh-oleh%20Khas%20Banten&descSize=20&descAlignY=55&animation=twinkling&fontColor=ffffff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=220&section=header&text=Rasa%20Jawara&fontSize=70&fontAlignY=38&desc=Website%20E-Commerce%20Oleh-oleh%20Khas%20Banten&descSize=18&descAlignY=58&animation=twinkling&fontColor=ffffff" width="100%"/>
+
+<img src="assets/images/logo.png" width="100" alt="Rasa Jawara Logo"/>
 
 <br/>
 
