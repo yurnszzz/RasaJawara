@@ -1,10 +1,9 @@
 <div align="center">
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,12&height=220&section=header&text=Rasa%20Jawara&fontSize=70&fontAlignY=38&desc=Website%20E-Commerce%20Oleh-oleh%20Khas%20Banten&descSize=18&descAlignY=58&animation=twinkling&fontColor=ffffff" width="100%"/>
-
-<img src="assets/images/logo.png" width="100" alt="Rasa Jawara Logo"/>
-
 <br/>
+<img src="assets/images/logo.png" width="80" alt="Rasa Jawara Logo"/>
+<br/><br/>
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](#)
